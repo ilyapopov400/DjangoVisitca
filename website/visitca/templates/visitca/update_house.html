@@ -1,0 +1,24 @@
+{% extends 'visitca/base.html'  %}
+{% load static %}
+
+
+{% block title %}Изменить проект дома{% endblock %}
+
+{% block content %}
+<div>
+    {% include 'includes/topindex.html' %}
+</div>
+
+<div class="base-content">
+    <h1>Здесь можно изменить проект выбранного дома</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+        {{ form }}
+        </table>
+        <button type="submit">Изменить проект дома</button>
+    </form>
+
+</div>
+
+{% endblock %}

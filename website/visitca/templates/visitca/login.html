@@ -1,0 +1,25 @@
+{% extends 'visitca/base.html'  %}
+{% load static %}
+
+
+{% block title %}аутентификация{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Страница для аутентификации пользователя</h1>
+</div>
+
+<form method="POST">
+    {% csrf_token %}
+    <div>{{form.non_field_errors}}</div>
+    {% for f in form %}
+    <p><label>{{f.label}}: {{f}}</label></p>
+    {% endfor %}
+    <p><button type="submit" class="form-button">Войти в приложение</button></p>
+</form>
+
+<div>
+    <a href="{% url 'visitca:register' %}">Если Вы не зарегистрированы в приложении -> регистрация</a>
+</div>
+
+{% endblock %}

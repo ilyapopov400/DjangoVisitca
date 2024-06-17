@@ -1,0 +1,43 @@
+html {
+    background-color: cyan;
+}
+
+.card-base {
+    background-color: bisque;
+    margin: 10px;
+    padding: 10px;
+}
+
+.navbar {
+    background-color: mediumslateblue;
+    margin: 10px;
+    padding: 10px;
+}
+
+.top-index {
+    background-color: #6892ee;
+    margin: 10px;
+    padding: 10px;
+}
+
+.base-content {
+    background-color: #68ee6f;
+    margin: 10px;
+    padding: 10px;
+}
+
+.index-content {
+    background-color: #eedc68;
+    margin: 10px;
+    padding: 10px;
+}
+
+.one-house {
+    background-color: #eedc68;
+    margin: 10px;
+    padding: 10px;
+}
+
+.center {
+  text-align: center;
+}

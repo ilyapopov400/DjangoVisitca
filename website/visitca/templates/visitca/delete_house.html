@@ -1,0 +1,22 @@
+{% extends 'visitca/base.html'  %}
+{% load static %}
+
+
+{% block title %}Удалить проект дома{% endblock %}
+
+{% block content %}
+<div>
+    {% include 'includes/topindex.html' %}
+</div>
+
+<div class="base-content">
+    <h1>Здесь можно удалить проект дома {{ object.name_house }}</h1>
+    <img src="{{ object.image.url }}" alt="картинка" height="100" width="150">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit">Удалить проект дома</button>
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'visitca/base.html'  %}
+{% load static %}
+
+
+{% block title %}Стартовая страница приложения{% endblock %}
+
+{% block content %}
+<div>
+    {% include 'includes/topindex.html' %}
+</div>
+
+<div class="base-content">
+    <h1>Почему выбирают именно нас</h1>
+    <ul>
+        <li>Мы завод-производитель</li>
+        <li>12 лет на строительном рынке</li>
+        <li>Сертифицированное производство</li>
+        <li>Представляем ипотеку от 5%</li>
+        <li>Поэтапная система оплаты</li>
+    </ul>
+</div>
+
+{% endblock %}

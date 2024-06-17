@@ -1,0 +1,26 @@
+{% extends 'visitca/base.html'  %}
+{% load static %}
+
+
+{% block title %}просмотр проекта дома{% endblock %}
+
+{% block content %}
+<div>
+    {% include 'includes/topindex.html' %}
+</div>
+
+<div class="base-content">
+    <h1 class="center">Просмотр проекта дома {{house.name_house}}</h1>
+    <div class="one-house">
+            <img src="{{ house.image.url }}" alt="картинка" height="100" width="150"/>
+            <p>Проект: {{house.name_house}}</p>
+            <p>{{house.description}}</p>
+            <p>Площадь: {{house.square}} квадратных метра</p>
+            <p>Габариты: {{house.dimensions}}</p>
+            <p>Стены: {{house.walls}}</p>
+    </div>
+    <a href="{% url 'visitca:update_house' house.pk %}">изменить проект дома</a> |
+    <a href="{% url 'visitca:delete_house' house.pk %}">удалить проект дома</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'visitca/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'visitca/css/styles.css' %}">
+    {% block css %} {% endblock %}
+</head>
+<body>
+
+<div class="navbar">
+    {% include 'includes/topbar.html' %}
+</div>
+
+<div class="card-base">
+    {% block content %} {% endblock %}
+</div>
+
+<div class="navbar" >
+    {% include 'includes/navbar.html' %}
+</div>
+
+</body>
+</html>

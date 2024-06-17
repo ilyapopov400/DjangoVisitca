@@ -1,0 +1,6 @@
+{% if request.user.is_authenticated %}
+    <a>пользователь: {{user.username}}</a> |
+    <a href="{% url 'visitca:logout' %}">выход из аккаунта</a>
+{% else %}
+    <a>Вы не авторизованны</a>
+{% endif %}
